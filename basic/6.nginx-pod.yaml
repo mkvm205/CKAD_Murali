@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod2
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.18
+      env:
+      - name: Hello_MSG
+        value: "Hellow from the levelup 3600"
+      - name: GREETING
+        value: "You are awesome keep learning"
+    - name: nginx-container1
+      image: nginx:1.18
+      env:
+      - name: Hello_MSG
+        value: "Murali POD 3600"
+      - name: GREETING
+        value: "Murali You are awesome keep learning"
